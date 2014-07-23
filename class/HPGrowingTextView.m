@@ -50,6 +50,8 @@
 @synthesize returnKeyType;
 @dynamic placeholder;
 @dynamic placeholderColor;
+@synthesize autoCorrectionType;
+
 
 // having initwithcoder allows us to use HPGrowingTextView in a Nib. -- aob, 9/2011
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -249,6 +251,11 @@
 - (void)setPlaceholderColor:(UIColor *)placeholderColor 
 {
     [internalTextView setPlaceholderColor:placeholderColor];
+}
+
+- (void)setAutoCorrectionType:(UITextAutocorrectionType)_AutoCorrectionType
+{
+    [internalTextView setAutocorrectionType:_AutoCorrectionType];
 }
 
 - (void)textViewDidChange:(UITextView *)textView
